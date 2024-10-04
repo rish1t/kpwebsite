@@ -14,7 +14,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 const ZodiakExtraBold = localFont({
-  src: "./fonts/Zodiak-ExtraBold.woff",
+  src: "./fonts/Zodiak-Extrabold.woff",
   variable: "--font-zodiak-extra",
   weight: "100 900",
 });
