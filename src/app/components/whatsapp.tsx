@@ -48,7 +48,7 @@ export default function WhatsAppChatBox() {
             <span className="text-xs text-gray-500 absolute bottom-1 right-2 z-10">{currentTime}</span>
           </div>
           <div className="mt-4 flex flex-col justify-between h-[calc(100%-6rem)]">
-            <p className="text-gray-700 mb-4">Have any questions? We're here to help!</p>
+            <p className="text-gray-700 mb-4">Have any questions? We&apos;re here to help!</p>
             <a 
               href="https://wa.me/918604825904" 
               target="_blank" 
