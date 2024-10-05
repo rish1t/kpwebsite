@@ -1,5 +1,4 @@
 import Hero from "./components/hero";
-import { Star, Scissors } from "lucide-react";
 import WhatsAppChatBox from "./components/whatsapp";
 import { About } from "./components/about";
 import Services from "./components/services";
