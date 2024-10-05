@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const BentoGrid: React.FC = () => {
   return (
-    <div className="flex justify-center items-center w-[100%] min-h-screen h-screen bg-gray-100">
+    <div className="flex justify-center items-center w-[100%] min-h-fit h-screen bg-gray-100">
       <div className="grid grid-cols-6 gap-2 w-full h-[100%] p-2">
         {/* Large item */}
         <div className="col-span-6 sm:col-span-3 sm:row-span-2 relative h-40 sm:h-auto overflow-hidden">
