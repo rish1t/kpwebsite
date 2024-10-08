@@ -8,17 +8,17 @@ export const Services = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
     return (
-        <div className="min-h-[100vh] py-5 w-[100%] flex flex-col md:px-0 items-center gap-9 justify-start" ref={ref} >
+        <div className="min-h-[100vh] leading-loose py-9 w-[100%] bg-[#151515] flex flex-col md:px-0 items-center gap-9 justify-start" ref={ref} >
             <div className="md:px-0 px-3" ref={ref} style={{
                 transform: isInView ? "none" : "translateY(200px)",
                 opacity: isInView ? 1 : 0,
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
             }}>
-                <p className="md:text-5xl text-2xl leading-relaxed font-medium text-center mt-9">
+                <p className="md:text-5xl text-gray-300 text-2xl leading-loose font-medium text-center mt-9">
                     We offer a wide array of services <br /> so you can look great and feel confident
                 </p>
             </div>
-            <div className="flex md:flex-row flex-col gap-3 mt-9 items-center justify-between w-[80%]">
+            <div className="flex md:flex-row flex-col gap-3 mt-[3%] items-center justify-between w-[80%]">
 
                 {/* Service 1 */}
                 <div className="md:w-[25%] w-[100%] h-[30rem] relative group" ref={ref} style={{
@@ -100,7 +100,7 @@ export const Services = () => {
                     </p>
                 </div>
             </div>
-            <button className="flex gap-3 hover:scale-105 hover:gap-4 transition-all px-7 items-center py-4 font-semibold bg-[#ffac8c] text-xl mt-9 rounded-3xl">
+            <button className="flex gap-3 hover:scale-105 hover:gap-4 transition-all px-7 items-center py-4 font-semibold bg-[#ffac8c] text-xl mt-9 rounded-full">
                 <p>View Services</p>
                 <ArrowRight size={24} />
             </button>

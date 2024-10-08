@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import whatsappIcon from '../../../public/whatsapp-icon.jpg'
+import whatsappIcon from '../../public/whatsapp-icon.jpg'
 
 export default function WhatsAppChatBox() {
   const [isVisible, setIsVisible] = useState(false)
