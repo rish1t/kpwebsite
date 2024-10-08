@@ -1,13 +1,9 @@
 "use client";
 
 import React from "react";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
 import { Component } from "./carouselDemo";
 
 export const Deals = () => {
-    const ref = useRef(null)
-    const isInView = useInView(ref, { once: true });
     return (
         <div className="h-[80vh] bg-gray-100 py-20 w-[100%] flex flex-col md:px-0 items-center gap-9 justify-start text-[#000000]">
             <div className="">
