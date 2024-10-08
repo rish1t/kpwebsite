@@ -38,7 +38,7 @@ export default function Navbar() {
     }, [isMenuOpen])
 
     return (
-        <nav className="bg-[#FEE6E1] p-4 fixed w-full z-50">
+        <nav className="bg-[#ffffff] p-4 fixed w-full z-50">
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center">

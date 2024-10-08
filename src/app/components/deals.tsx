@@ -1,18 +1,34 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 export const Deals = () => {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true });
     return (
-        <div className="min-h-[100vh] py-5 w-[100%] flex flex-col md:px-0 items-center gap-9 justify-start bg-[#ffac8c]">
+        <div className="min-h-[100vh] py-5 w-[100%] flex flex-col md:px-0 items-center gap-9 justify-start bg-[#151515]">
             {/* Section Title */}
-            <h2 className="text-5xl font-medium text-center mt-9">
-                Discover Our Exclusive Deals
-            </h2>
+            <div ref={ref} className="" style={{
+                transform: isInView ? "none" : "translateY(200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+            }}>
+                <h2 className="text-5xl font-medium text-center text-gray-300 mt-9" >
+                    Discover Our Exclusive Deals
+                </h2>
+            </div>
 
             {/* Flexbox for 8 deal boxes */}
-            <div className="flex flex-wrap gap-3 mt-9 items-center justify-between w-[80%]">
-                
+            <div ref={ref} className="flex flex-wrap gap-3 mt-9 items-center justify-between w-[80%]" style={{
+                transform: isInView ? "none" : "translateY(200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
+            }}>
+
                 {/* Deal 1 */}
                 <div className="md:w-[24%] w-[100%] h-[25rem] relative group">
                     <Image
