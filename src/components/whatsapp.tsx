@@ -7,17 +7,27 @@ import whatsappIcon from '../../public/whatsapp-icon.jpg'
 export default function WhatsAppChatBox() {
   const [isVisible, setIsVisible] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
+  const [bgImage, setBgImage] = useState('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const visibilityTimer = setTimeout(() => {
       setIsVisible(true)
     }, 3000)
 
-    return () => clearTimeout(timer)
+    const expansionTimer = setTimeout(() => {
+      setIsExpanded(true)
+      setBgImage('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')
+    }, 7000)
+
+    return () => {
+      clearTimeout(visibilityTimer)
+      clearTimeout(expansionTimer)
+    }
   }, [])
 
   const handleExpand = () => {
     setIsExpanded(true)
+    setBgImage('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')
   }
 
   const handleCollapse = () => {
@@ -36,17 +46,21 @@ export default function WhatsAppChatBox() {
         }`}
       >
         <div 
-          className={`bg-[#e5ddd5] rounded-lg shadow-lg p-4 absolute bottom-0 right-0 transition-all duration-300 ease-in-out ${
+          style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+          className={`rounded-lg shadow-lg p-4 absolute bottom-0 right-0 transition-all duration-300 ease-in-out ${
             isExpanded 
               ? 'opacity-100 scale-100 w-full h-full' 
               : 'opacity-0 scale-95 w-16 h-16'
           }`}
         >
-          <div className="bg-white rounded-lg p-3 shadow-sm relative mt-6 mb-4">
-            <div className="clip-path-message bg-white absolute inset-0"></div>
-            <p className="text-gray-800 font-medium mb-1 relative z-10">Get in Touch Now!</p>
-            <span className="text-xs text-gray-500 absolute bottom-1 right-2 z-10">{currentTime}</span>
-          </div>
+          <div className="message-bubble bg-white p-3 shadow-sm relative mt-6 mb-4">
+          <p className="text-gray-800 font-medium mb-1 relative z-10">Get in Touch Now!</p>
+          <span className="text-xs text-gray-500 absolute bottom-1 right-2 z-10">{currentTime}</span>
+        </div>
           <div className="mt-4 flex flex-col justify-between h-[calc(100%-6rem)]">
             <p className="text-gray-700 mb-4">Have any questions? We&apos;re here to help!</p>
             <a 
@@ -82,8 +96,21 @@ export default function WhatsAppChatBox() {
         /> 
       </button>
       <style jsx>{`
-        .clip-path-message {
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25px 100%, 0% calc(100% - 25px));
+        .message-bubble {
+          position: relative;
+          border-radius: 0.75rem;
+          margin-left: 10px; /* Add some space for the protrusion */
+        }
+        .message-bubble::after {
+          content: '';
+          position: absolute;
+          left: -10px; /* Position it outside the bubble */
+          top: 20%; /* Center vertically */
+          transform: translateY(-50%); /* Adjust for perfect centering */
+          width: 20px;
+          height: 20px;
+          background-color: white;
+          clip-path: polygon(100% 0, 0 0, 100% 100%); /* Create left-pointing triangle */
         }
       `}</style>
     </div>

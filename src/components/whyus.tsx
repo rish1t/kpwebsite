@@ -25,7 +25,7 @@ export default function Component() {
   ]
 
   return (
-    <div className="flex flex-col items-center justify-center bg-stone-50 py-[5%] px-4 sm:px-6 lg:px-8" ref={ref} style={{
+    <div className="flex flex-col items-center justify-center py-[5%] px-4 sm:px-6 lg:px-8" ref={ref} style={{
         transform: isInView ? "none" : "translateY(200px)",
         opacity: isInView ? 1 : 0,
         transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s`
