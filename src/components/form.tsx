@@ -8,6 +8,7 @@ export default function FormComponent() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
+    email: '',
     query: ''
   })
 
@@ -22,7 +23,7 @@ export default function FormComponent() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log('Form submitted:', formData)
-    setFormData({ name: '', phone: '', query: '' })
+    setFormData({ name: '', phone: '', email: '', query: '' })
   }
 
   return (
@@ -45,19 +46,32 @@ export default function FormComponent() {
               required
             />
           </div>
-          <div>
-            <span></span>
-            <Label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</Label>
-            <Input
-              id="phone"
-              name="phone"
-              type="tel"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
-              placeholder="+123 456 7890"
-              required
-            />
+          <div className='flex gap-4'>
+            <span className='md:w-[25%]'>
+              <Label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</Label>
+              <Input
+                id="phone"
+                name="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
+                placeholder="+123 456 7890"
+                required
+              />
+            </span>
+            <span className='md:w-[75%]'>
+              <Label htmlFor="email" className="text-sm font-medium text-gray-700">Email id (Optional)</Label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
+                placeholder="youremail@gmail.com"
+              />
+            </span>
           </div>
           <div>
             <Label htmlFor="query" className="text-sm font-medium text-gray-700">Your Message</Label>
