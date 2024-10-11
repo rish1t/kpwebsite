@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function Brands() {
   return(
-    <div className='h-[50vw] w-full flex justify-center items-center bg-[#151515]'>
+    <div className='min-h-[50vw] w-full flex justify-center items-center bg-[#151515]'>
         <div className="h-[80%] md:w-[80%] text-gray-200 flex flex-col items-center justify-around">
             <h1 className="text-5xl text-center mb-6">We Use Only the Finest for your Hair.</h1>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-4 h-[60%] w-full">
