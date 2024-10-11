@@ -7,8 +7,6 @@ import Services from "../components/services";
 import Deals from "../components/deals";
 import Testicles from "../components/testicles";
 import Footer from "../components/footer";
-import VideoPage from "@/components/video";
-import FormComponent from "@/components/form";
 import Component from "@/components/whyus";
 import Brands from "@/components/brands";
 
