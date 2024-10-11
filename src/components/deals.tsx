@@ -5,7 +5,7 @@ import { Component } from "./carouselDemo";
 
 export const Deals = () => {
     return (
-        <div className="h-[80vh] bg-gray-100 py-20 w-[100%] flex flex-col md:px-0 items-center gap-9 justify-start text-[#000000]">
+        <div className="min-h-[80vh] bg-gray-100 py-20 w-[100%] flex flex-col md:px-0 items-center gap-9 justify-start text-[#000000]">
             <div className="">
                 <h2 className="md:text-5xl text-[6vw] font-medium text-center  mt-9" >
                     Discover Our Exclusive Deals

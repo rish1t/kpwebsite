@@ -18,21 +18,21 @@ export default function Home() {
       <WhatsAppChatBox />
       <Hero />
 
-      {/* About Us Section */}
+
       <About />
 
-      {/* Services Section */}
+
       <Services />
-      <VideoPage />
       <Component />
-      <Brands/>
-      {/* Deals Section */}
+
+
+      <Brands />
+
       <Deals />
 
-      {/* Client Testimonials */}
+      {/* <VideoPage /> */}
       <Testicles />
-      <FormComponent />
-      {/* Footer */}
+
       <Footer />
     </div>
   );

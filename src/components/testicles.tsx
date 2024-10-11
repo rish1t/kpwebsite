@@ -1,119 +1,109 @@
-'use client';
-import { useInView } from "framer-motion";
+// pages/index.tsx
 import Image from 'next/image';
-import React, { useRef } from "react";
+import React from 'react';
 
 const BentoGrid: React.FC = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const images = [
+    'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  ];
+
   return (
-    <div className="flex justify-center items-center w-[100%] min-h-fit h-screen bg-gray-200">
-      <div className="grid grid-cols-6 gap-2 w-full h-[100%] p-2">
-        {/* Large item */}
-        <div className="col-span-6 sm:col-span-3 sm:row-span-2 relative h-40 sm:h-auto overflow-hidden" ref={ref} style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.9s"
-            }}>
+    <div className="min-h-fit md:py-[4%] w-screen bg-[#1b1b1b] flex items-center justify-center p-4">
+      <div className="grid grid-cols-6 gap-3 w-full max-w-7xl">
+        {/* Image 1: Large wide */}
+        <div className="md:col-span-4 col-span-4 relative overflow-hidden" style={{ paddingTop: '35%' }}>
           <Image
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Bento Image 1"
-            fill
-            className="object-cover"
+            src={images[0]}
+            alt="Image 1"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
           />
         </div>
 
-        {/* Medium item */}
-        <div className="col-span-6 sm:col-span-2 sm:row-span-2 relative h-40 sm:h-auto overflow-hidden" ref={ref} style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
-            }}>
+        {/* Image 2: Small square */}
+        <div className="md:col-span-2 col-span-2 relative overflow-hidden" style={{ paddingTop: '95%' }}>
           <Image
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Bento Image 2"
-            fill
-            className="object-cover"
+            src={images[1]}
+            alt="Image 2"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
           />
         </div>
 
-        {/* Tall item */}
-        <div className="col-span-3 sm:col-span-1 sm:row-span-3 relative h-40 sm:h-auto overflow-hidden" ref={ref} style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-            }}>
+        {/* Image 3: Tall */}
+        <div className="md:col-span-2 md:row-span-2 col-span-2 relative overflow-hidden" style={{ paddingTop: '140%' }}>
           <Image
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Bento Image 3"
-            fill
-            className="object-cover"
+            src={images[2]}
+            alt="Image 3"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
           />
         </div>
 
-        {/* Small item */}
-        <div className="col-span-3 sm:col-span-2 relative h-40 sm:h-auto overflow-hidden" ref={ref} style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.9s"
-            }}>
+        {/* Image 4: Medium wide */}
+        <div className="md:col-span-4 col-span-4 relative overflow-hidden" style={{ paddingTop: '45%' }}>
           <Image
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Bento Image 4"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="col-span-3 sm:col-span-2 relative h-40 sm:h-auto overflow-hidden" ref={ref} style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
-            }}>
-          <Image
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Bento Image 4"
-            fill
-            className="object-cover"
+            src={images[3]}
+            alt="Image 4"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
           />
         </div>
 
-        {/* Small square item */}
-        <div className="col-span-3 sm:col-span-1 relative h-40 sm:h-auto overflow-hidden" ref={ref} style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-            }}>
+        <div className="md:col-span-2 col-span-4 relative overflow-hidden" style={{ paddingTop: '95%' }}>
           <Image
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Bento Image 5"
-            fill
-            className="object-cover"
+            src={images[5]}
+            alt="Image 6"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
           />
         </div>
 
-        {/* Wide item */}
-        <div className="col-span-6 sm:col-span-3 relative h-40 sm:h-auto overflow-hidden" ref={ref} style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.9s"
-            }}>
+        {/* Image 5: Small square */}
+        <div className="md:col-span-2 col-span-2 relative overflow-hidden" style={{ paddingTop: '95%' }}>
           <Image
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Bento Image 6"
-            fill
-            className="object-cover"
+            src={images[4]}
+            alt="Image 5"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
           />
         </div>
-        <div className="col-span-6 sm:col-span-3 relative h-40 sm:h-auto overflow-hidden" ref={ref} style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-            }}>
+
+        {/* Image 6: Small square */}
+        
+
+        {/* Image 7: Large */}
+        <div className="col-span-4 relative overflow-hidden" style={{ paddingTop: '55%' }}>
           <Image
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Bento Image 6"
-            fill
-            className="object-cover"
+            src={images[6]}
+            alt="Image 7"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+          />
+        </div>
+
+        {/* Image 8: Small square */}
+        <div className="md:col-span-2 col-span-2 relative overflow-hidden" style={{ paddingTop: '95%' }}>
+          <Image
+            src={images[7]}
+            alt="Image 8"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
           />
         </div>
       </div>

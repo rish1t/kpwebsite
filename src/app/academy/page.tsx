@@ -12,7 +12,7 @@ import FormComponent from "@/components/form";
 import Component from "@/components/whyus";
 import Brands from "@/components/brands";
 
-export default function Bome() {
+export default function Home() {
   return (
     <div className="flex flex-col items-center justify-start font-[family-name:var(--font-geist-sans)] bg-[#FDFBF9] text-[#111111]">
       <WhatsAppChatBox />
