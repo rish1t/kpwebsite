@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
+import Link from "next/link";
 
 export const Courses = () => {
   const ref = useRef(null);
@@ -43,12 +44,12 @@ export const Courses = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-60"></div>
           {/* Button */}
-          <button className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
+          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
             <div className="flex items-center justify-center gap-2 group-hover:text-xl group-hover:gap-3 transition-all">
             View 
             <ArrowRight/>
             </div>
-          </button>
+          </Link>
         </div>
 
         {/* Course Card 2 */}
@@ -70,12 +71,12 @@ export const Courses = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-60"></div>
           {/* Button */}
-          <button className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
+          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
             <div className="flex items-center justify-center gap-2 group-hover:text-xl group-hover:gap-3 transition-all">
             View 
             <ArrowRight/>
             </div>
-          </button>
+          </Link>
         </div>
 
         {/* Course Card 3 */}
@@ -97,12 +98,12 @@ export const Courses = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-60"></div>
           {/* Button */}
-          <button className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
+          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
             <div className="flex items-center justify-center gap-2 group-hover:text-xl group-hover:gap-3 transition-all">
             View 
             <ArrowRight/>
             </div>
-          </button>
+          </Link>
         </div>
 
         {/* Course Card 4 */}
@@ -124,12 +125,12 @@ export const Courses = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-60"></div>
           {/* Button */}
-          <button className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
+          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
             <div className="flex items-center justify-center gap-2 group-hover:text-xl group-hover:gap-3 transition-all">
             View 
             <ArrowRight/>
             </div>
-          </button>
+          </Link>
         </div>
       </div>
 
