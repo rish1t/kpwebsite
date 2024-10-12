@@ -1,7 +1,7 @@
 "use client"
 
 import WhatsAppChatBox from "@/components/whatsapp";
-import Deals from "@/components/deals";
+// import Deals from "@/components/deals";
 import Testicles from "@/components/testicles";
 import Footer from "@/components/footer";
 import FormComponent from "@/components/form";

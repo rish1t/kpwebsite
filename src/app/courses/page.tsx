@@ -143,7 +143,7 @@ export default function Component() {
                 </h2>
                 <section>
                   <h3 className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.5vw] font-semibold mb-3 sm:mb-4">
-                    What You'll Learn
+                    What You&apos;ll Learn
                   </h3>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                     {content.learn.map((item, index) => (
