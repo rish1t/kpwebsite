@@ -9,10 +9,11 @@ import Testicles from "../components/testicles";
 import Footer from "../components/footer";
 import Component from "@/components/whyus";
 import Brands from "@/components/brands";
+// import InstagramReels from "@/components/reels";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-start font-[family-name:var(--font-geist-sans)] bg-[#FDFBF9] text-[#111111]">
+    <div className="flex flex-col overflow-x-hidden items-center justify-start font-[family-name:var(--font-geist-sans)] bg-[#FDFBF9] text-[#111111]">
       <WhatsAppChatBox />
       <Hero />
 
@@ -21,6 +22,7 @@ export default function Home() {
 
 
       <Services />
+      {/* <InstagramReels /> */}
       <Component />
 
 

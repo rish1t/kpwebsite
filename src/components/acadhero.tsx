@@ -27,7 +27,7 @@ const HeroSection = () => {
           <p className="text-white mt-4 md:max-w-[50vw] text-[6vw] md:text-[2vw]">
             Transform your passion into profession with our hands-on training courses.
           </p>
-          <button className="flex items-center justify-center gap-[1vw] mt-[4vw] md:px-[1.5vw] px-[2.3vw] md:py-[1vw] py-[1.8vw] bg-[#F27708] transition-all text-black md:text-[1.5vw] rounded-full hover:scale-105 hover:gap-[1.2vw]">
+          <button className="flex items-center justify-center gap-[1vw] mt-[4vw] md:px-[1.5vw] lg:px-[1vw] px-[2.3vw] lg:py-[0.8vw] md:py-[1vw] py-[1.8vw] bg-[#F27708] transition-all text-black md:text-[1.5vw] rounded-full hover:scale-105 hover:gap-[1.2vw]">
             Learn More
             <ArrowRight size={24}/>
           </button>

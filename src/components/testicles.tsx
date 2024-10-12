@@ -15,7 +15,7 @@ const BentoGrid: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-fit md:py-[4%] w-screen bg-[#1b1b1b] flex items-center justify-center p-4">
+    <div className="min-h-fit md:py-[4%] w-screen flex items-center justify-center p-4">
       <div className="grid grid-cols-6 gap-3 w-full max-w-7xl">
         {/* Image 1: Large wide */}
         <div className="md:col-span-4 col-span-4 relative overflow-hidden" style={{ paddingTop: '35%' }}>

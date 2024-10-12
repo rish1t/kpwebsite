@@ -1,98 +1,41 @@
-import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import { Send } from "lucide-react"
 
-export default function FormComponent() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    query: ''
-  })
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prevData => ({
-      ...prevData,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    setFormData({ name: '', phone: '', email: '', query: '' })
-  }
-
+export default function Component() {
   return (
-    <div className="py-[5%] w-[100%] flex items-center justify-center bg-[#f5f5f5] px-4 sm:px-6 lg:px-8">
-      <div className="md:w-[60%] w-full space-y-8 bg-white rounded-3xl shadow-lg p-8">
-        <div className="text-center">
-          <h2 className="text-4xl font-extrabold text-gray-800 mb-2">Get In Touch</h2>
-          <p className="text-sm text-gray-500">We would love to hear from you!</p>
+    <div className="min-h-screen md:py-0 py-9 flex items-center justify-center w-screen bg-black text-gray-100 p-4 sm:p-8">
+      <div className="max-w-6xl w-full mx-auto flex flex-col items-center">
+        <div className="w-full text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-[4vw] lg:text-[3.5vw] xl:text-[3vw] font-bold mb-2">Join our Academy</h1>
+          <h2 className="text-2xl sm:text-3xl md:text-[2.5vw] lg:text-[2vw] xl:text-[1.8vw] text-orange-500 mb-8">Ready to elevate your skills?</h2>
         </div>
-        <form onSubmit={handleSubmit} className="mt-6 space-y-6">
-          <div>
-            <Label htmlFor="name" className="text-sm font-medium text-gray-700">Your Name</Label>
-            <Input
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
-              placeholder="Please enter your Name"
-              required
-            />
+        
+        <form className="space-y-6 w-full max-w-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Input placeholder="Your full name" className="bg-transparent border-gray-600 text-gray-300" />
+            <Input placeholder="Your email" type="email" className="bg-transparent border-gray-600 text-gray-300" />
           </div>
-          <div className='flex gap-4'>
-            <span className='md:w-[25%]'>
-              <Label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</Label>
-              <Input
-                id="phone"
-                name="phone"
-                type="tel"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
-                placeholder="+123 456 7890"
-                required
-              />
-            </span>
-            <span className='md:w-[75%]'>
-              <Label htmlFor="email" className="text-sm font-medium text-gray-700">Email id (Optional)</Label>
-              <Input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
-                placeholder="youremail@gmail.com"
-              />
-            </span>
+          
+          <Input placeholder="Phone number" type="tel" className="bg-transparent border-gray-600 text-gray-300" />
+          
+          <Textarea 
+            placeholder="Tell us about your background and what you hope to achieve" 
+            className="bg-transparent border-gray-600 text-gray-300 h-32"
+          />
+          
+          <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end gap-4">
+            <Button className="bg-transparent text-orange-500 border border-orange-500 rounded-full px-6 hover:bg-orange-500 hover:text-white transition-colors w-full sm:w-auto">
+              Submit Application
+              <Send className="ml-2 h-4 w-4" />
+            </Button>
+            
+            
           </div>
-          <div>
-            <Label htmlFor="query" className="text-sm font-medium text-gray-700">Your Message</Label>
-            <Textarea
-              id="query"
-              name="query"
-              value={formData.query}
-              onChange={handleChange}
-              className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
-              rows={4}
-              placeholder="Write your message here..."
-              required
-            />
-          </div>
-          <Button
-            type="submit"
-            className="w-full bg-[#f89134] text-white py-3 px-6 rounded-full hover:bg-orange-500 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 transition transform hover:-translate-y-1"
-          >
-            Send Message
-          </Button>
         </form>
+        
+        
       </div>
     </div>
   )
