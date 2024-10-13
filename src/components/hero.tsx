@@ -19,7 +19,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="relative w-full z-0 md:h-screen h-[60vh] overflow-hidden">
+    <div className="relative w-full z-0 h-screen h-[60vh] overflow-hidden">
       <AnimatePresence initial={false}>
         <motion.img
           key={currentIndex}
@@ -35,7 +35,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center px-8">
         <div className="text-center text-white">
-          <h1 className="text-4xl font-[family-name:var(--font-stardom)] mb-5 md:text-5xl lg:text-8xl font-semibold drop-shadow-lg">
+          <h1 className="text-5xl font-[family-name:var(--font-stardom)] mb-5 md:text-5xl lg:text-8xl font-semibold drop-shadow-lg">
           Unleash Your Inner Glow at <br/>Kaya Planet
           </h1>
           <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
