@@ -44,7 +44,7 @@ export const Courses = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-60"></div>
           {/* Button */}
-          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
+          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-gray-300/20 backdrop-blur-xl text-white text-center py-4 font-semibold transition">
             <div className="flex items-center justify-center gap-2 group-hover:text-xl group-hover:gap-3 transition-all">
             View 
             <ArrowRight/>
@@ -71,7 +71,7 @@ export const Courses = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-60"></div>
           {/* Button */}
-          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
+          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-gray-300/20 backdrop-blur-xl text-white text-center py-4 font-semibold transition">
             <div className="flex items-center justify-center gap-2 group-hover:text-xl group-hover:gap-3 transition-all">
             View 
             <ArrowRight/>
@@ -98,7 +98,7 @@ export const Courses = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-60"></div>
           {/* Button */}
-          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
+          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-gray-300/20 backdrop-blur-xl text-white text-center py-4 font-semibold transition">
             <div className="flex items-center justify-center gap-2 group-hover:text-xl group-hover:gap-3 transition-all">
             View 
             <ArrowRight/>
@@ -125,7 +125,7 @@ export const Courses = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 transition-opacity duration-300 group-hover:opacity-60"></div>
           {/* Button */}
-          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-[#ffac8c] text-black text-center py-4 font-semibold transition">
+          <Link href={"/courses"} className="group text-lg absolute bottom-0 left-0 w-full bg-gray-300/20 backdrop-blur-xl text-white text-center py-4 font-semibold transition">
             <div className="flex items-center justify-center gap-2 group-hover:text-xl group-hover:gap-3 transition-all">
             View 
             <ArrowRight/>

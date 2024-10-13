@@ -36,7 +36,7 @@ export default function AboutUs() {
           />
           <div className="absolute bottom-4 left-4 right-4 bg-black bg-opacity-70 p-4 rounded">
             <p className="text-white text-sm sm:text-base">
-            &quote;Hair reflects who you are, telling your story before you speak. It&apos;s our job to help others discover their unique beauty&quote;
+            &quot;Hair reflects who you are, telling your story before you speak. It&apos;s our job to help others discover their unique beauty&quot;
             </p>
             <p className="text-white text-xs sm:text-sm mt-2">- Trevor Sorbie</p>
           </div>

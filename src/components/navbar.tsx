@@ -132,7 +132,7 @@ export default function Navbar() {
 
                     {/* Sidebar */}
                     <div
-                        className={`fixed top-0 right-0 h-full w-64 bg-[#FDFBF9] shadow-lg transform transition-transform duration-300 ease-in-out backdrop-blur-md drop-shadow-2xl ${
+                        className={`fixed top-0 right-0 rounded-tl-xl h-full w-64 bg-[#FDFBF9] shadow-3xl transform transition-transform duration-300 ease-in-out backdrop-blur-md drop-shadow-2xl ${
                             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                         }`}
                     >
@@ -143,12 +143,12 @@ export default function Navbar() {
                         >
                             <X className="h-6 w-6" />
                         </button>
-                        <div className="flex flex-col space-y-6 mt-16 p-6">
+                        <div className="flex flex-col space-y-6 mt-16 p-6 bg-[#FDFBF9] h-[100vh]">
                             {navItems.map((item) => (
                                 <Link
                                     key={item.name}
                                     href={item.href}
-                                    className="text-[#111111] hover:text-[#F27708] font-medium transition-colors duration-300"
+                                    className="text-[#111111] border-b w-[100%] hover:text-[#F27708] font-medium transition-colors duration-300"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {item.name}

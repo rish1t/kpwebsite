@@ -33,10 +33,10 @@ export default function Hero() {
         />
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center px-8">
+      <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center px-8">
         <div className="text-center text-white">
-          <h1 className="text-4xl mb-5 md:text-5xl lg:text-6xl font-semibold drop-shadow-lg">
-          Unleash Your Inner Glow at Kaya Planet
+          <h1 className="text-4xl font-[family-name:var(--font-stardom)] mb-5 md:text-5xl lg:text-8xl font-semibold drop-shadow-lg">
+          Unleash Your Inner Glow at <br/>Kaya Planet
           </h1>
           <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
             Step into a world of beauty and rejuvenation at Kaya Planet

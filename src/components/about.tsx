@@ -9,7 +9,7 @@ export const About = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
     return (
-        <div className="min-h-[100vh] bg-white pt-5 w-[100%] flex flex-col items-center  gap-9 justify-center" >
+        <div className="min-h-[100vh] bg-white pt-5 w-[100%] flex flex-col items-center gap-9 justify-center" >
             <div ref={ref} className="flex md:flex-row flex-col gap-9 w-[80%] items-stretch mt-9 py-9 justify-center" style={{
                 transform: isInView ? "none" : "translateX(-200px)",
                 opacity: isInView ? 1 : 0,

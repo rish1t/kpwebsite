@@ -14,20 +14,20 @@ const HeroSection = () => {
           className="grayscale brightness-50 contrast-125"
         />
         {/* Grainy overlay */}
-        <div className="absolute inset-0 bg-black opacity-30 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-black opacity-50 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-[url('/path-to-grainy-overlay.png')] opacity-10"></div>
       </div>
 
       {/* Intro text and button */}
       <div className="relative z-10 flex items-center h-full w-[100%] px-6">
         <div className="text-left">
-          <h1 className="text-white text-[9vw] md:text-[4vw] font-medium">
+          <h1 className="text-white  font-[family-name:var(--font-stardom)]  text-[9vw] md:text-[4vw] font-medium">
             Welcome to Our Salon Academy
           </h1>
           <p className="text-white mt-4 md:max-w-[50vw] text-[6vw] md:text-[2vw]">
             Transform your passion into profession with our hands-on training courses.
           </p>
-          <button className="flex items-center justify-center gap-[1vw] mt-[4vw] md:px-[1.5vw] lg:px-[1vw] px-[2.3vw] lg:py-[0.8vw] md:py-[1vw] py-[1.8vw] bg-[#F27708] transition-all text-black md:text-[1.5vw] rounded-full hover:scale-105 hover:gap-[1.2vw]">
+          <button className="flex items-center justify-center gap-[1vw] mt-[4vw] md:px-[1.5vw] lg:px-[1vw] px-[2.3vw] lg:py-[0.8vw] md:py-[1vw] py-[1.8vw] bg-[#F27708] transition-all text-black md:text-[1.3vw] rounded-full hover:scale-105 hover:gap-[1.2vw]">
             Learn More
             <ArrowRight size={24}/>
           </button>
