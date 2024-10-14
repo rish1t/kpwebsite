@@ -264,18 +264,18 @@ export default function Component() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-300 w-[100%] flex items-center justify-center pt-16"> {/* Added margin top */}
-      <div className="bg-gray-300 rounded-lg p-4 sm:p-6 lg:p-8 w-full max-w-6xl">
-        <h1 className="text-[5vw] sm:text-[4vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw] font-bold mb-4 sm:mb-6 lg:mb-8 text-center">
+    <div className="min-h-screen bg-white w-[100%] flex items-center justify-center pt-16"> {/* Added margin top */}
+      <div className="bg-white-300 rounded-lg p-4 sm:p-6 lg:p-8 w-full max-w-6xl">
+        <h1 className="text-[5vw] sm:text-[4vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2.5vw] font-bold mb-4 sm:mb-6 lg:mb-8 text-center">
           Salon Academy Courses
         </h1>
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-6 bg-gray-300 min-h-fit"> {/* Adjusted spacing */}
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-6 bg-white min-h-fit "> {/* Adjusted spacing */}
             {courses.map((course) => (
               <TabsTrigger
                 key={course.id}
                 value={course.id}
-                className="px-2 mx-2 md:my-0 my-2 sm:px-4 py-2 h-12 text-[2.5vw] sm:text-[2vw] md:text-[1.5vw] lg:text-[1.2vw] xl:text-[1vw] font-medium transition-colors  data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=inactive]:bg-gray-400 data-[state=inactive]:text-black" // Set fixed height and inactive styles
+                className="px-2 mx-2 md:my-0 my-2 sm:px-4 py-2 h-12 text-[2.5vw] sm:text-[2vw] md:text-[1.5vw] lg:text-[1.2vw] xl:text-[1vw] font-medium transition-colors  data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=inactive]:bg-white data-[state=inactive]:text-black shadow-lg" // Set fixed height and inactive styles
               >
                 {course.name}
               </TabsTrigger>
