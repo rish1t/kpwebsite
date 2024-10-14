@@ -9,7 +9,7 @@ import Testicles from "../components/testicles";
 import Footer from "../components/footer";
 import Component from "@/components/whyus";
 import Brands from "@/components/brands";
-// import InstagramReels from "@/components/reels";
+import InstagramReels from "@/components/reels";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
 
 
       <Services />
-      {/* <InstagramReels /> */}
+      <InstagramReels />
       <Component />
 
 

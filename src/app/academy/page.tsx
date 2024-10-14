@@ -16,9 +16,9 @@ export default function Home() {
       <HeroSection />
 
 
+      <Courses />
       <AboutUs />
 
-      <Courses />
       <Testicles />
       <FormComponent />
       
