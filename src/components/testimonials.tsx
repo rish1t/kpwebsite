@@ -70,7 +70,6 @@ export default function Component() {
     if (!scrollerRef.current || !containerRef.current) return
 
     const scrollContent = scrollerRef.current
-    const container = containerRef.current
 
     const items = Array.from(scrollContent.children)
     items.forEach(item => {
