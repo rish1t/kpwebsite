@@ -14,7 +14,7 @@ const brands = [b1, b2, b3, b4, b5, b6, b7, b8];
 
 export default function Brands() {
   return (
-    <div className='lg:h-[45vw] md:h-[55vw] py-9 px-3 h-[80vh] min-h-fit w-full flex justify-center items-center bg-[#151515]'>
+    <div className='lg:h-[45vw] md:h-[55vw] h-[100vh] py-9 px-3 min-h-fit w-full flex justify-center items-center bg-[#151515]'>
       <div className="md:h-[80%] h-[100%] w-[100%] md:gap-0 gap-14 text-gray-400 flex flex-col items-center justify-around md:justify-between">
         <h1 className="md:text-[2vw] text-[6vw] text-center">We Use Only the Finest for your Hair.</h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-[5vw] md:w-[70%] w-[90%]">
