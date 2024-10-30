@@ -97,7 +97,7 @@ export default function Component() {
   }, [])
 
   return (
-    <div className="w-full bg-gray-50 py-16">
+    <div className="w-full bg-gray-50 py-16 min-h-fit">
       <h2 className="text-3xl font-medium text-center mb-10 text-gray-800">Customer Testimonials</h2>
       <div ref={containerRef} className="w-full overflow-hidden p-4">
         <div
