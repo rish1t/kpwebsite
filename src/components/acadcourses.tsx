@@ -128,11 +128,6 @@ export default function Component() {
                         <span className="text-gray-200">Schedule: {content.schedule}</span>
                       </div>
                     </div>
-                    {content.additionalInfo && (
-                      <div className="text-base text-orange-500 font-medium">
-                        <span>{content.additionalInfo}</span>
-                      </div>
-                    )}
                   </CardContent>
                 </Card>
                 <Card className="bg-[#1a1a1a] border-none">
