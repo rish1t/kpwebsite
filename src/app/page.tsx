@@ -4,12 +4,11 @@ import Hero from "../components/hero";
 import WhatsAppChatBox from "../components/whatsapp";
 import { About } from "../components/about";
 import Services from "../components/services";
-import Deals from "../components/deals";
 import Testicles from "../components/testicles";
 import Footer from "../components/footer";
 import Component from "@/components/whyus";
 import Brands from "@/components/brands";
-import InstagramReels from "@/components/reels";
+import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -22,14 +21,14 @@ export default function Home() {
 
 
       <Services />
-      <InstagramReels />
+      {/* <InstagramReels /> */}
       <Component />
 
 
       <Brands />
 
-      <Deals />
-
+      {/* <Deals /> */}
+      <Testimonials/>
       {/* <VideoPage /> */}
       <Testicles />
 

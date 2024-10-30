@@ -1,26 +1,36 @@
-'use client'
+'use client';
 
-import Image from "next/image"
+import Image from "next/image";
+import b1 from "../../public/drive-download-20241025T123905Z-001/1 - Schwarzkopf-Logo.svg";
+import b2 from "../../public/drive-download-20241025T123905Z-001/2 - Skinora-Logo.svg";
+import b3 from "../../public/drive-download-20241025T123905Z-001/3 - charlottet logo.svg";
+import b4 from "../../public/drive-download-20241025T123905Z-001/4 - Loreal logo.svg";
+import b5 from "../../public/drive-download-20241025T123905Z-001/5 - NATURICA logo.svg";
+import b6 from "../../public/drive-download-20241025T123905Z-001/6 - NARS logo.svg";
+import b7 from "../../public/drive-download-20241025T123905Z-001/7 - CASMARA logo.svg";
+import b8 from "../../public/drive-download-20241025T123905Z-001/8 - MAC logo.svg";
+
+const brands = [b1, b2, b3, b4, b5, b6, b7, b8];
 
 export default function Brands() {
   return (
-    <div className='md:h-[40vw] py-9 px-3 h-[100vw] w-full flex justify-center items-center bg-[#151515]'>
-      <div className="md:h-[80%] h-[100%] w-[100%] text-gray-200 flex flex-col items-center justify-between">
-        <h1 className="md:text-[2vw] text-[8vw] text-center ">We Use Only the Finest for your Hair.</h1>
-        <div className="grid grid-cols-4 gap-12 md:w-[70%] w-[80%]">
-          {Array.from({ length: 8 }).map((_, index) => (
+    <div className='lg:h-[45vw] md:h-[55vw] py-9 px-3 h-[80vh] min-h-fit w-full flex justify-center items-center bg-[#151515]'>
+      <div className="md:h-[80%] h-[100%] w-[100%] md:gap-0 gap-14 text-gray-400 flex flex-col items-center justify-around md:justify-between">
+        <h1 className="md:text-[2vw] text-[6vw] text-center">We Use Only the Finest for your Hair.</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-[5vw] md:w-[70%] w-[90%]">
+          {brands.map((brand, index) => (
             <div key={index} className="flex justify-center items-center">
               <Image
-                width={80}
-                height={80}
+                src={brand}
+                width={180}
+                height={180}
                 alt={`Brand ${index + 1}`}
-                src="https://cdn.iconscout.com/icon/free/png-512/free-white-icon-download-in-svg-png-gif-file-formats--large-square-geometric-symbols-pack-sign-icons-38025.png?f=webp&w=256"
-                className="object-contain"
+                className="object-contain lg:w-[10vw] w-[45vw] md:mb-4 mb-9"
               />
             </div>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }

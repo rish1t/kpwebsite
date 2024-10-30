@@ -1,42 +1,45 @@
-import { Facebook, Twitter, Instagram, Linkedin, Phone, MapPin } from "lucide-react"
+import { Instagram, Phone, MapPin } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
+import kp from '../../public/kayaplanetlogo.png'
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-8 w-[100%] border-t border-gray-800">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-          <div className="flex flex-col items-start space-y-2 mb-6 sm:mb-0">
-            <Link href="/" className="text-2xl font-bold">
-              LOGO
+    <footer className="bg-black text-gray-300 py-16 w-full border-t border-gray-800">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="flex flex-col items-start space-y-6">
+            <Link href="/" className="inline-block">
+              <Image
+                src={kp}
+                alt="Kaya Planet"
+                width={150}
+                height={150}
+                className=""
+              />
             </Link>
-            <span className="text-sm font-medium">Kaya Planet</span>
-            <div className="flex items-center space-x-2 text-sm">
-              <Phone size={16} />
-              <span>+1 (555) 123-4567</span>
-            </div>
-            <div className="flex items-center space-x-2 text-sm">
-              <MapPin size={16} />
-              <span>123 Eco Street, Green City, 12345</span>
-            </div>
           </div>
-          <div className="flex space-x-4">
-            <Link href="#" className="hover:text-gray-300 transition-colors">
-              <Facebook size={20} />
-              <span className="sr-only">Facebook</span>
-            </Link>
-            <Link href="#" className="hover:text-gray-300 transition-colors">
-              <Twitter size={20} />
-              <span className="sr-only">Twitter</span>
-            </Link>
-            <Link href="#" className="hover:text-gray-300 transition-colors">
-              <Instagram size={20} />
-              <span className="sr-only">Instagram</span>
-            </Link>
-            <Link href="#" className="hover:text-gray-300 transition-colors">
-              <Linkedin size={20} />
-              <span className="sr-only">LinkedIn</span>
-            </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="flex flex-col space-y-4">
+              <h3 className="text-lg font-semibold text-white mb-2">Contact Us</h3>
+              <div className="flex items-center space-x-3 text-sm group">
+                <Phone size={18} className="text-gray-400 group-hover:text-white transition-colors" />
+                <span className="group-hover:text-white transition-colors">+91 86048 25904</span>
+              </div>
+              <div className="flex items-start space-x-3 text-sm group">
+                <MapPin size={18} className="text-gray-400 mt-1 flex-shrink-0 group-hover:text-white transition-colors" />
+                <span className="flex-1 group-hover:text-white transition-colors">125/53-B, opp. Viva Natraj, Lal Quarter, Govind Nagar, Kanpur, Uttar Pradesh</span>
+              </div>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <h3 className="text-lg font-semibold text-white mb-2">Follow Us</h3>
+              <div className="flex space-x-4">
+                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <Instagram size={24} />
+                  <span className="sr-only">Instagram</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

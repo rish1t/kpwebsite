@@ -15,13 +15,13 @@ export default function Home() {
       <WhatsAppChatBox />
       <HeroSection />
 
-
-      <Courses />
       <AboutUs />
+      <Courses />
+
 
       <Testicles />
       <FormComponent />
-      
+
 
       <Footer />
     </div>
