@@ -91,7 +91,7 @@ export default function Component() {
 
   return (
     <div className="min-h-screen bg-[#0f0f0f] w-full flex items-center justify-center py-16 px-4">
-      <div className="w-full max-w-4xl px-3">
+      <div className="w-full max-w-full md:max-w-4xl px-3">
         <h1 className="text-3xl font-semibold mb-16 text-center text-white">
           Our Courses
         </h1>
