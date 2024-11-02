@@ -101,7 +101,7 @@ export default function Component() {
               <TabsTrigger
                 key={course.id}
                 value={course.id}
-                className="px-6 py-3 text-base font-medium transition-colors rounded-md text-gray-300 hover:bg-[#2a2a2a] data-[state=active]:bg-orange-500 data-[state=active]:text-white"
+                className="px-6 py-3 mx-1 text-base font-medium transition-colors rounded-md text-gray-300 hover:bg-[#2a2a2a] data-[state=active]:bg-orange-500 data-[state=active]:text-white"
               >
                 {course.name}
               </TabsTrigger>
