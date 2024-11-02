@@ -13,8 +13,6 @@ export default function Navbar() {
     const navItems = [
         { name: 'HOME', href: '/' },
         { name: 'ACADEMY', href: '/academy' },
-        { name: 'GALLERY', href: '/' },
-        { name: 'ABOUT US', href: '/'},
     ]
 
     const toggleMenu = () => {

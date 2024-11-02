@@ -36,11 +36,11 @@ export const About = () => {
                     <br /> <br />
                     Our team consists of highly skilled artists who are passionate about their craft. Each stylist and technician brings a unique blend of creativity and professionalism, committed to delivering the highest standards of service. From cutting-edge hair design to rejuvenating skincare treatments, we tailor our offerings to meet the individual needs of our clients.
                     <br /> <br />
+                    
                     Our luxurious environment and personalized approach allow you to unwind and indulge in a sanctuary of style and relaxation. Join us, and let our experts elevate your beauty journey.
+
+Experience the difference at Kaya Planet Beauty Salon—where your beauty is our passion.
                     <br /><br />
-                    <span className="flex gap-2 hover:font-semibold hover:gap-4 transition-all items-center underline">
-                        view services <ArrowUpRight />
-                    </span>
                 </p>
             </div>
         </div>

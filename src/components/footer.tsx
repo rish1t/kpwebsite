@@ -34,7 +34,7 @@ export default function Footer() {
             <div className="flex flex-col space-y-4">
               <h3 className="text-lg font-semibold text-white mb-2">Follow Us</h3>
               <div className="flex space-x-4">
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="https://www.instagram.com/kayaplanetbeautysalon/" target="_blank" className="text-gray-400 hover:text-white transition-colors">
                   <Instagram size={24} />
                   <span className="sr-only">Instagram</span>
                 </Link>

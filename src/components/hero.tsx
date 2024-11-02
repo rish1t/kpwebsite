@@ -36,11 +36,11 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center px-8">
         <div className="text-center text-white">
           <h1 className="text-5xl font-[family-name:var(--font-stardom)] mb-5 md:text-5xl lg:text-8xl font-semibold drop-shadow-lg">
-          Unleash Your Inner Glow at <br/>Kaya Planet
+          Unleash Your Inner Glow at <br/><span className="">Kaya Planet</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
             Step into a world of beauty and rejuvenation at Kaya Planet
-          </p>
+          </p> 
           <button className="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-colors shadow-lg">
             Start Your Journey
           </button>
