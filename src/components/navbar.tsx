@@ -95,7 +95,7 @@ export default function Navbar() {
                             </Link>
                         ))}
                         <a
-                            href="tel:+1234567890"
+                            href="tel:+918604825904"
                             className="bg-[#F27708] text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-[#F89134] transition-colors duration-300"
                         >
                             <Phone className="h-4 w-4" />
