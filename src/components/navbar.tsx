@@ -5,14 +5,17 @@ import Link from 'next/link'
 import { Menu, X, Phone } from 'lucide-react'
 import Image from 'next/image'
 import kp from '../../public/kayaplanetlogo.png'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
+    const router = usePathname()
 
     const navItems = [
         { name: 'HOME', href: '/' },
         { name: 'ACADEMY', href: '/academy' },
+        { name: 'GALLERY', href: '/gallery' }
     ]
 
     const toggleMenu = () => {
@@ -56,11 +59,13 @@ export default function Navbar() {
         <nav
             className={`${
                 isScrolled ? 'bg-[#151515]/80 backdrop-blur-xl' : 'bg-transparent'
+            } ${router === "/gallery" ? 
+                "bg-black/70 backdrop-blur-xl" : ""
             } h-[16] p-4 fixed w-full z-50 transition-colors duration-300 text-white`}
         >
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
-                    <div className="flex items-center">
+                    <Link href="/" className="flex items-center">
                         {/* <svg
                             width="50"
                             height="50"
@@ -79,7 +84,7 @@ export default function Navbar() {
                             height="50"
                             className=""
                         />
-                    </div>
+                    </Link>
 
                     {/* Desktop menu */}
                     <div className="hidden md:flex space-x-6 items-center">

@@ -5,10 +5,10 @@ import WhatsAppChatBox from "../components/whatsapp";
 import { About } from "../components/about";
 import Services from "../components/services";
 import Testicles from "../components/testicles";
-import Footer from "../components/footer";
 import Component from "@/components/whyus";
 import Brands from "@/components/brands";
 import Testimonials from "@/components/testimonials";
+import InstagramC from "@/components/Instagram";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
 
 
       <Services />
-      {/* <InstagramReels /> */}
+      <InstagramC />
       <Component />
 
 
@@ -31,8 +31,6 @@ export default function Home() {
       <Testimonials/>
       {/* <VideoPage /> */}
       <Testicles />
-
-      <Footer />
     </div>
   );
 }
