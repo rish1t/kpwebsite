@@ -16,10 +16,6 @@ export default function Poster() {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
   }
 
-  // const prevSlide = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
-  // }
-
   useEffect(() => {
     const interval = setInterval(nextSlide, 4000)
     return () => clearInterval(interval)
@@ -27,46 +23,33 @@ export default function Poster() {
 
   return (
     <main className="container mx-auto px-4 py-8">
-      <div className="relative w-full overflow-hidden rounded-xl">
-        <div 
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {images.map((src, index) => (
-            <div key={index} className="flex-shrink-0 w-full relative aspect-[16/9]">
-              <Image
-                src={src}
-                alt={`Slide ${index + 1}`}
-                fill
-                sizes="100vw"
-                priority={index === 0}
-                className="object-cover"
-              />
-            </div>
-          ))}
+      <div className="flex flex-col items-center">
+        <div className="relative w-full overflow-hidden rounded-xl">
+          <div 
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {images.map((src, index) => (
+              <div key={index} className="flex-shrink-0 w-full relative aspect-[16/9]">
+                <Image
+                  src={src}
+                  alt={`Slide ${index + 1}`}
+                  fill
+                  sizes="100vw"
+                  priority={index === 0}
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
         </div>
         
-        {/* <button 
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-          onClick={prevSlide}
-          aria-label="Previous slide"
-        >
-          &#10094;
-        </button>
-        <button 
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-          onClick={nextSlide}
-          aria-label="Next slide"
-        >
-          &#10095;
-        </button> */}
-        
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="mt-4 flex space-x-2">
           {images.map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === currentIndex ? 'bg-white' : 'bg-white bg-opacity-50'
+              className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                index === currentIndex ? 'bg-black' : 'bg-gray-300'
               }`}
               onClick={() => setCurrentIndex(index)}
               aria-label={`Go to slide ${index + 1}`}
@@ -74,7 +57,6 @@ export default function Poster() {
           ))}
         </div>
       </div>
-      
     </main>
   )
 }
