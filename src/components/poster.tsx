@@ -16,9 +16,9 @@ export default function Poster() {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
   }
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
-  }
+  // const prevSlide = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
+  // }
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 4000)
