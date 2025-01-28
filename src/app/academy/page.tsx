@@ -1,12 +1,12 @@
 "use client"
 
 import WhatsAppChatBox from "@/components/whatsapp";
-// import Deals from "@/components/deals";
-import Testicles from "@/components/testicles";
+// import Testicles from "@/components/testicles";
 import HeroSection from "@/components/acadhero";
-//import Courses from "@/components/acadcourses";
 import AboutUs from "@/components/academy/about-us";
 import PosterGrid from "@/components/posterGrid";
+import Strip from "@/components/horizontal-strip";
+import StudentShowcase from "@/components/sw";
 //import Poster from "@/components/poster";
 
 
@@ -15,11 +15,13 @@ export default function Home() {
     <div className="flex overflow-x-hidden flex-col items-center justify-start font-[family-name:var(--font-geist-sans)] bg-[#FDFBF9] text-[#111111]">
       <WhatsAppChatBox />
       <HeroSection />
+      <Strip/>
       <AboutUs />
       <PosterGrid/>
       {/* <Poster/> */}
       {/* <Courses /> */}
-      <Testicles />
+      <StudentShowcase/>
+      {/* <Testicles /> */}
     </div>
   );
 }

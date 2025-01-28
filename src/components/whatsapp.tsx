@@ -64,7 +64,7 @@ export default function WhatsAppChatBox() {
           <div className="mt-4 flex flex-col justify-between h-[calc(100%-6rem)]">
             <p className="text-gray-700 mb-4">Have any questions? We&apos;re here to help!</p>
             <a 
-              href="https://wa.me/918604825904" 
+              href="https://wa.me/919999424375" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="block w-full py-2 px-4 bg-[#25D366] text-white rounded-full text-center font-medium hover:bg-[#128C7E] transition duration-300" 

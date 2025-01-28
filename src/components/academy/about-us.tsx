@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { UsersRound, Scissors } from "lucide-react"
+import sonam from "./../../../public/sonam.jpg"
 
 export default function AboutUs() {
   return (
@@ -10,38 +10,33 @@ export default function AboutUs() {
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div className="space-y-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            Crafting Excellence, One Stylist at a Time.
+            Elevating Beauty Education and Artistry
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600">Discover Kaya Planet in detail.</p>
-          <div className="grid sm:grid-cols-2 gap-8 pt-8">
-            <div>
-              <UsersRound className="w-8 h-8 text-red-600 mb-4" />
-              <h3 className="font-semibold mb-2 text-lg sm:text-xl lg:text-2xl">Tailored Learning</h3>
-              <p className="text-sm sm:text-base text-gray-600">We refine your skills with the latest in hair and beauty innovations, ensuring you stand out in a competitive market.</p>
-            </div>
-            <div>
-              <Scissors className="w-8 h-8 text-red-600 mb-4" />
-              <h3 className="font-semibold mb-2 text-lg sm:text-xl lg:text-2xl">Advanced Techniques</h3>
-              <p className="text-sm sm:text-base text-gray-600">Our personalized coaching programs focus on your unique journey, offering hands-on training in specialized areas to help you thrive in the beauty industry.</p>
-            </div>
-          </div>
+          <p className="text-lg sm:text-xl text-gray-600 mb-6">
+            Kaya Planet Academy, an IAF certified institution, offers comprehensive courses in makeup, hair, lashes,
+            nails, and skin care. Our expert curriculum integrates knowledge from international beauty brands, equipping
+            you with the latest trends and techniques. With skilled educators and hands-on experience, we&apos;re dedicated
+            to helping you discover your potential and start a successful career in beauty.
+          </p>
+          <p className="text-lg sm:text-xl text-gray-600">
+            Our salon has earned numerous accolades, collaborating with celebrity hairstylists like Ritika Kadam and
+            Ojas Rajani, and receiving guidance from Parul Garg. We&apos;ve styled celebrities such as Mahi Vij and Sonam
+            Kapoor, along with many influencers. Honored as the Best Bridal Makeup Artist in Delhi in 2018 and
+            consistently ranked as the top bridal artist on WedMeGood since 2021, our reputation in the industry is
+            well-established.
+          </p>
         </div>
-        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[500px] lg:w-[500px]">
           <Image
-            src="https://images.unsplash.com/photo-1488282687151-c5e6582e7cf1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src={sonam}
             alt="Hairstylist working on a client"
             layout="fill"
             objectFit="cover"
-            className="rounded-lg grayscale brightness-50 contrast-125"
+            className="rounded-lg"
           />
-          <div className="absolute bottom-4 left-4 right-4 bg-black bg-opacity-70 p-4 rounded">
-            <p className="text-white text-sm sm:text-base">
-            &quot;Hair reflects who you are, telling your story before you speak. It&apos;s our job to help others discover their unique beauty&quot;
-            </p>
-            <p className="text-white text-xs sm:text-sm mt-2">- Trevor Sorbie</p>
-          </div>
         </div>
       </div>
     </div>
   )
 }
+

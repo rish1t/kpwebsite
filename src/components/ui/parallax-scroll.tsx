@@ -21,12 +21,16 @@ export const ParallaxScroll = ({
   const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
   const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const translateFourth = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const translateFifth = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
-  const third = Math.ceil(images.length / 3);
+  const fifth = Math.ceil(images.length / 5);
 
-  const firstPart = images.slice(0, third);
-  const secondPart = images.slice(third, 2 * third);
-  const thirdPart = images.slice(2 * third);
+  const firstPart = images.slice(0, fifth);
+  const secondPart = images.slice(fifth, 2 * fifth);
+  const thirdPart = images.slice(2 * fifth, 3 * fifth);
+  const fourthPart = images.slice(3 * fifth, 4 * fifth);
+  const fifthPart = images.slice(4 * fifth);
 
   return (
     <div
@@ -38,43 +42,35 @@ export const ParallaxScroll = ({
         ref={gridRef}
       >
         <div className="grid gap-10">
-          {secondPart.map((el, idx) => (
-            <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
-              <Image
-                src={el}
-                className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                height="400"
-                width="400"
-                alt="thumbnail"
-              />
-            </motion.div>
-          ))}
-        </div>
-        <div className="grid gap-10">
           {firstPart.map((el, idx) => (
             <motion.div
               style={{ y: translateFirst }} // Apply the translateY motion value here
               key={"grid-1" + idx}
             >
               <Image
-                src={el}
+                priority={true}
+                src={`https://drive.google.com/uc?id=${el}&sz=w1500`} // Ensure the URL is valid
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                height="400"
-                width="400"
-                alt="thumbnail"
+                height={400}
+                width={400}
+                alt="thumbnail1"
               />
             </motion.div>
           ))}
         </div>
         <div className="grid gap-10">
           {secondPart.map((el, idx) => (
-            <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
+            <motion.div
+              style={{ y: translateSecond }} // Apply the translateY motion value here
+              key={"grid-2" + idx}
+            >
               <Image
-                src={el}
+                priority={true}
+                src={`https://drive.google.com/uc?id=${el}&sz=w1500`}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt="thumbnail2"
               />
             </motion.div>
           ))}
@@ -83,24 +79,40 @@ export const ParallaxScroll = ({
           {thirdPart.map((el, idx) => (
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
               <Image
-                src={el}
+                priority={true}
+                src={`https://drive.google.com/uc?id=${el}&sz=w1500`}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt="thumbnail3"
               />
             </motion.div>
           ))}
         </div>
         <div className="grid gap-10">
-          {secondPart.map((el, idx) => (
-            <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
+          {fourthPart.map((el, idx) => (
+            <motion.div style={{ y: translateFourth }} key={"grid-4" + idx}>
               <Image
-                src={el}
+                priority={true}
+                src={`https://drive.google.com/uc?id=${el}&sz=w1500`}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt="thumbnail4"
+              />
+            </motion.div>
+          ))}
+        </div>
+        <div className="grid gap-10">
+          {fifthPart.map((el, idx) => (
+            <motion.div style={{ y: translateFifth }} key={"grid-5" + idx}>
+              <Image
+                priority={true}
+                src={`https://drive.google.com/uc?id=${el}&sz=w1500`}
+                className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
+                height="400"
+                width="400"
+                alt="thumbnail5"
               />
             </motion.div>
           ))}

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, Mail } from 'lucide-react'
 import Image from 'next/image'
 import kp from '../../public/kayaplanetlogo.png'
 import { usePathname } from 'next/navigation'
@@ -15,7 +15,7 @@ export default function Navbar() {
     const navItems = [
         { name: 'HOME', href: '/' },
         { name: 'ACADEMY', href: '/academy' },
-        { name: 'GALLERY', href: '/gallery' }
+        { name: 'GALLERY', href: '/gallery' },
     ]
 
     const toggleMenu = () => {
@@ -57,12 +57,14 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`${
-                isScrolled ? 'bg-[#151515]/80 backdrop-blur-xl' : 'bg-transparent'
-            } ${router === "/gallery" ? 
-                "bg-black/70 backdrop-blur-xl" : ""
-            } h-[16] p-4 fixed w-full z-50 transition-colors duration-300 text-white`}
+            className={`h-[16] p-4 fixed w-full z-50 transition-colors duration-300 text-white ${isScrolled
+                    ? 'bg-[#151515]/80 backdrop-blur-xl'
+                    : router === '/gallery'
+                        ? 'bg-black/70 backdrop-blur-xl'
+                        : 'bg-transparent'
+                }`}
         >
+
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center">
@@ -99,10 +101,10 @@ export default function Navbar() {
                         ))}
                         <a
                             href="tel:+918604825904"
-                            className="bg-[#F27708] text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-[#F89134] transition-colors duration-300"
+                            className="border text-[#F27708] border-[#F27708] hover:text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-[#F89134] transition-colors duration-300"
                         >
-                            <Phone className="h-4 w-4" />
-                            <span className="hidden lg:inline">CALL US NOW!</span>
+                            <Mail className="h-4 w-4" />
+                            <span className="hidden lg:inline">ENROLL NOW!</span>
                         </a>
                     </div>
 
@@ -133,20 +135,18 @@ export default function Navbar() {
                 <div className="md:hidden">
                     {/* Overlay */}
                     <div
-                        className={`fixed inset-0 bg-black bg-opacity-30 transition-opacity duration-300 ease-in-out ${
-                            isMenuOpen
+                        className={`fixed inset-0 bg-black bg-opacity-30 transition-opacity duration-300 ease-in-out ${isMenuOpen
                                 ? 'opacity-100'
                                 : 'opacity-0 pointer-events-none'
-                        }`}
+                            }`}
                         onClick={() => setIsMenuOpen(false)}
                         aria-hidden="true"
                     />
 
                     {/* Sidebar */}
                     <div
-                        className={`fixed top-0 right-0 rounded-tl-xl h-full w-64 bg-[#FDFBF9] shadow-3xl transform transition-transform duration-300 ease-in-out backdrop-blur-md drop-shadow-2xl ${
-                            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-                        }`}
+                        className={`fixed top-0 right-0 rounded-tl-xl h-full w-64 bg-[#FDFBF9] shadow-3xl transform transition-transform duration-300 ease-in-out backdrop-blur-md drop-shadow-2xl ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                            }`}
                     >
                         <button
                             onClick={toggleMenu}
