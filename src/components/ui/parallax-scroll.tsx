@@ -38,10 +38,10 @@ export const ParallaxScroll = ({
       ref={gridRef}
     >
       <div
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 items-start mx-auto gap-10 py-40 px-10"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-start mx-auto md:gap-10 gap-3 py-40 md:px-10 px-3"
         ref={gridRef}
       >
-        <div className="grid gap-10">
+        <div className="grid gap-3 md:gap-10">
           {firstPart.map((el, idx) => (
             <motion.div
               style={{ y: translateFirst }} // Apply the translateY motion value here
@@ -58,7 +58,7 @@ export const ParallaxScroll = ({
             </motion.div>
           ))}
         </div>
-        <div className="grid gap-10">
+        <div className="grid gap-3 md:gap-10">
           {secondPart.map((el, idx) => (
             <motion.div
               style={{ y: translateSecond }} // Apply the translateY motion value here
@@ -75,7 +75,7 @@ export const ParallaxScroll = ({
             </motion.div>
           ))}
         </div>
-        <div className="grid gap-10">
+        <div className="grid gap-3 md:gap-10">
           {thirdPart.map((el, idx) => (
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
               <Image
@@ -89,7 +89,7 @@ export const ParallaxScroll = ({
             </motion.div>
           ))}
         </div>
-        <div className="grid gap-10">
+        <div className="grid gap-3 md:gap-10">
           {fourthPart.map((el, idx) => (
             <motion.div style={{ y: translateFourth }} key={"grid-4" + idx}>
               <Image
@@ -103,7 +103,7 @@ export const ParallaxScroll = ({
             </motion.div>
           ))}
         </div>
-        <div className="grid gap-10">
+        <div className="grid gap-3 md:gap-10">
           {fifthPart.map((el, idx) => (
             <motion.div style={{ y: translateFifth }} key={"grid-5" + idx}>
               <Image

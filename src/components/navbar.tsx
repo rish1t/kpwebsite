@@ -100,7 +100,7 @@ export default function Navbar() {
                     {/* Mobile menu button and call button */}
                     <div className="md:hidden flex items-center space-x-4">
                         <a
-                            href="tel:+1234567890"
+                            href="mailto:kayaplanetacademy@gmail.com"
                             className="bg-[#F27708] text-white p-2 rounded-full flex items-center justify-center hover:bg-[#F89134] transition-colors duration-300"
                             aria-label="Call us now"
                         >
