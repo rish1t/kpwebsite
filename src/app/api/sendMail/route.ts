@@ -1,6 +1,7 @@
+import { NextRequest } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(req: { json: () => PromiseLike<{ name: any; city: any; phone: any; course: any; }> | { name: any; city: any; phone: any; course: any; }; }) {
+export async function POST(req : NextRequest) {
   try {
     const { name, city, phone, course } = await req.json();
 

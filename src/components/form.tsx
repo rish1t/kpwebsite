@@ -14,11 +14,11 @@ export default function Component() {
     course: "",
   });
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSelectChange = (value: any) => {
+  const handleSelectChange = (value: string) => {
     setFormData({ ...formData, course: value });
   };
 
