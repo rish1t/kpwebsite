@@ -11,7 +11,12 @@ const imageFiles = [
 export default function PosterGrid() {
   return (
     <main className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Our Courses</h1>
+      <div className="flex justify-between items-center mb-8 md:mb-12">
+        <span className="text-sm font-semibold px-3 py-1 border border-gray-300 rounded-full">OUR COURSES</span>
+      </div>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-9">
+            Master the Art of Beauty <br />with Our Courses
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {imageFiles.map((file, index) => (
           <div

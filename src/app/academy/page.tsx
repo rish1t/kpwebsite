@@ -7,6 +7,7 @@ import AboutUs from "@/components/academy/about-us";
 import PosterGrid from "@/components/posterGrid";
 import Strip from "@/components/horizontal-strip";
 import StudentShowcase from "@/components/sw";
+import Component from "@/components/form";
 //import Poster from "@/components/poster";
 
 
@@ -21,7 +22,7 @@ export default function Home() {
       {/* <Poster/> */}
       {/* <Courses /> */}
       <StudentShowcase/>
-      {/* <Testicles /> */}
+      <Component />
     </div>
   );
 }

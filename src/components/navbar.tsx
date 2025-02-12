@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Mail } from 'lucide-react'
+import { Menu, X, Mail, PhoneCall } from 'lucide-react'
 import Image from 'next/image'
 import kp from '../../public/kayaplanetlogo.png'
 import { usePathname } from 'next/navigation'
@@ -88,23 +88,37 @@ export default function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
-                        <a
+                        {/* <a
                             href="mailto:kayaplanetacademy@gmail.com"
                             className="border text-[#F27708] border-[#F27708] hover:text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-[#F89134] transition-colors duration-300"
                         >
                             <Mail className="h-4 w-4" />
                             <span className="hidden lg:inline">ENROLL NOW!</span>
+                        </a> */}
+                        <a
+                            href="tel:+919999424375"
+                            className="border text-[#F27708] border-[#F27708] hover:text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-[#F89134] transition-colors duration-300"
+                        >
+                            <PhoneCall className="h-4 w-4" />
+                            <span className="hidden lg:inline">CALL US</span>
                         </a>
                     </div>
 
                     {/* Mobile menu button and call button */}
                     <div className="md:hidden flex items-center space-x-4">
-                        <a
+                        {/* <a
                             href="mailto:kayaplanetacademy@gmail.com"
                             className="bg-[#F27708] text-white p-2 rounded-full flex items-center justify-center hover:bg-[#F89134] transition-colors duration-300"
                             aria-label="Call us now"
                         >
                             <Mail className="h-5 w-5" />
+                        </a> */}
+                        <a
+                            href="tel:+919999424375"
+                            className="bg-[#F27708] text-white p-2 rounded-full flex items-center justify-center hover:bg-[#F89134] transition-colors duration-300"
+                            aria-label="Call us now"
+                        >
+                            <PhoneCall className="h-5 w-5" />
                         </a>
                         <button
                             onClick={toggleMenu}
