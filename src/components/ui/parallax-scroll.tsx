@@ -49,7 +49,7 @@ export const ParallaxScroll = ({
             >
               <Image
                 priority={true}
-                src={`https://drive.google.com/uc?id=${el}&sz=w1500`} // Ensure the URL is valid
+                src={`${el}`} // Ensure the URL is valid
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height={400}
                 width={400}
@@ -66,7 +66,7 @@ export const ParallaxScroll = ({
             >
               <Image
                 priority={true}
-                src={`https://drive.google.com/uc?id=${el}&sz=w1500`}
+                src={`${el}`}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
@@ -80,7 +80,7 @@ export const ParallaxScroll = ({
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
               <Image
                 priority={true}
-                src={`https://drive.google.com/uc?id=${el}&sz=w1500`}
+                src={`${el}`}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
@@ -94,7 +94,7 @@ export const ParallaxScroll = ({
             <motion.div style={{ y: translateFourth }} key={"grid-4" + idx}>
               <Image
                 priority={true}
-                src={`https://drive.google.com/uc?id=${el}&sz=w1500`}
+                src={`${el}`}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
@@ -108,7 +108,7 @@ export const ParallaxScroll = ({
             <motion.div style={{ y: translateFifth }} key={"grid-5" + idx}>
               <Image
                 priority={true}
-                src={`https://drive.google.com/uc?id=${el}&sz=w1500`}
+                src={`${el}`}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
