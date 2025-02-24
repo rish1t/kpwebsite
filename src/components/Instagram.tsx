@@ -41,7 +41,7 @@ export default function InstagramPromo() {
                             <div className="relative aspect-[9/16] w-full transform transition-transform duration-300 hover:scale-[1.02]">
                                 <div className="min-h-fit">
                                     <Image
-                                        src="https://res.cloudinary.com/dhmm5yszo/image/upload/v1731179354/jfjfjgkg_g70tf9.png"
+                                        src="/kpinsta10kphone.png"
                                         alt="Instagram profile preview"
                                         width={500}
                                         height={500}

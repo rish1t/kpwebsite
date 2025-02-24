@@ -32,7 +32,7 @@ export default function Strip() {
       {error && <p className="text-center text-red-500">{error}</p>}
 
       {!loading && !error && (
-        <div className="flex md:justify-center gap-4 whitespace-nowrap">
+        <div className="flex gap-4 whitespace-nowrap">
           {images.length > 0 ? (
             images.map((src, index) => (
               <div

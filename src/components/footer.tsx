@@ -24,7 +24,7 @@ export default function Footer() {
               <h3 className="text-lg font-semibold text-white mb-2">Contact Us</h3>
               <div className="flex items-center space-x-3 text-sm group">
                 <Phone size={18} className="text-gray-400 group-hover:text-white transition-colors" />
-                <span className="group-hover:text-white transition-colors">+91 86048 25904</span>
+                <span className="group-hover:text-white transition-colors">+91 99994 24375</span>
               </div>
               <div className="flex items-start space-x-3 text-sm group">
                 <MapPin size={18} className="text-gray-400 mt-1 flex-shrink-0 group-hover:text-white transition-colors" />

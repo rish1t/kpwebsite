@@ -1,30 +1,36 @@
-import { useEffect, useState } from "react";
-import Image from "next/image";
+"use client"
+
+import { useEffect, useState } from "react"
+import Image from "next/image"
 
 export default function StudentShowcase() {
-  const [studentWorks, setStudentWorks] = useState<{ src: string; alt: string }[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [images, setImages] = useState<{ src: string; alt: string }[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await fetch("https://kpcrud-vj8f.vercel.app/api/links3");
-        if (!res.ok) throw new Error("Failed to fetch images");
+        const res = await fetch("https://kpcrud-vj8f.vercel.app/api/links3")
+        if (!res.ok) throw new Error("Failed to fetch images")
 
-        const data = await res.json();
-        setStudentWorks(data.map((item: { imageUrl: string }, index: number) => ({
-          src: item.imageUrl,
-          alt: `Student work ${index + 1}`
-        })));
+        const data = await res.json()
+        setImages(
+          data.map((item: { imageUrl: string }, index: number) => ({
+            src: item.imageUrl,
+            alt: `Student work ${index + 1}`,
+          }))
+        )
       } catch (error) {
-        console.error("Error fetching images:", error);
+        console.error("Error fetching images:", error)
+        setError("Error fetching images")
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
-    fetchImages();
-  }, []);
+    fetchImages()
+  }, [])
 
   return (
     <section className="py-16">
@@ -38,34 +44,30 @@ export default function StudentShowcase() {
           Crafting Beauty: <br /> A Gallery of Student Excellence
         </h2>
 
-        {loading ? (
-          <p className="text-center text-gray-500">Loading images...</p>
-        ) : studentWorks.length === 0 ? (
-          <p className="text-center text-gray-500">No images found.</p>
-        ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-            {studentWorks.map((work, index) => (
-              <div
-                key={index}
-                className={`relative overflow-hidden rounded-lg shadow-sm ${
-                  index === 0 ? "sm:col-span-2 sm:row-span-2" : 
-                  index === 5 ? "md:col-span-2 md:row-span-2" : 
-                  index === 9 ? "md:hidden" : ""
-                }`}
-              >
-                <Image
-                  src={work.src || "/placeholder.svg"}
-                  alt={work.alt}
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
-                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-                />
-              </div>
-            ))}
-          </div>
-        )}
+        <div className="relative">
+          {loading && <p className="text-center py-8">Loading images...</p>}
+          {error && <p className="text-center text-red-500 py-8">{error}</p>}
+
+          {!loading && !error && (
+            <div className="flex gap-4 overflow-x-auto pb-4 min-w-full snap-x snap-mandatory scroll-smooth scrollbar-hide">
+              {images.length > 0 ? (
+                images.map((image, index) => (
+                  <div key={index} className="relative w-[250px] h-[312px] shrink-0 snap-start">
+                    <Image
+                      src={image.src || "/placeholder.svg"}
+                      alt={image.alt}
+                      fill
+                      className="object-cover rounded-xl"
+                    />
+                  </div>
+                ))
+              ) : (
+                <p className="text-center w-full py-8">No images available.</p>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </section>
-  );
+  )
 }

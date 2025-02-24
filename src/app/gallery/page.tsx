@@ -15,7 +15,12 @@ export default function Page() {
         if (!res.ok) throw new Error("Failed to fetch images");
 
         const data = await res.json();
-        setImages(data.map((item: { imageUrl: string }) => item.imageUrl));
+        const imageUrls = data.map((item: { imageUrl: string }) => item.imageUrl);
+        
+        // Shuffle the images array
+        const shuffledImages = imageUrls.sort(() => Math.random() - 0.5);
+        
+        setImages(shuffledImages);
       } catch (err) {
         setError((err as Error).message);
       } finally {
