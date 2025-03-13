@@ -39,7 +39,7 @@ useEffect(() => {
   const scrollContainer = scrollContainerRef.current;
   if (!scrollContainer || loading || error || images.length === 0) return;
 
-  let speed = 0.5; // pixels per frame
+  const speed = 0.5; // pixels per frame
 
   const animateScroll = () => {
     if (!scrollContainer) return;
