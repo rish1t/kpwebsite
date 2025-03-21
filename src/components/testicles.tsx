@@ -25,7 +25,7 @@ const BentoGrid: React.FC = () => {
 
   return (
     <div className="min-h-fit bg-black md:py-[4%] w-screen flex items-center justify-center p-4">
-      <div className="grid grid-cols-6 gap-3 w-full max-w-[90%]">
+      <div className="grid grid-cols-6 gap-3 w-full md:max-w-[90%]">
         {loading ? (
           <p className="text-center text-white col-span-6">Loading images...</p>
         ) : images.length < 7 ? (
