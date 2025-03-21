@@ -5,8 +5,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import Avatar from "boring-avatars";
 
+interface Testimonial {
+  id: string;
+  username: string;
+  rating: number;
+  time: string;
+  text: string;
+}
+
 export default function ReviewsScroller() {
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState<Testimonial[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -95,7 +103,7 @@ export default function ReviewsScroller() {
             className="flex p-3"
             style={{ willChange: "transform" }}
           >
-            {displayReviews.map((review: any, index: number) => (
+            {displayReviews.map((review: Testimonial, index: number) => (
               <Card
                 key={`${review.id}-${index}`}
                 className="flex-shrink-0 w-[320px] mx-3 transition-all duration-300 hover:shadow-md bg-white border-none"

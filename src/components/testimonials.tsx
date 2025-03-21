@@ -100,7 +100,7 @@ export default function ReviewsScroller() {
             className="flex p-3"
             style={{ willChange: "transform" }}
           >
-            {displayReviews.map((review: any, index: number) => (
+            {displayReviews.map((review: Testimonial, index: number) => (
               <Card
                 key={`${review.id}-${index}`}
                 className="flex-shrink-0 w-[320px] mx-3 transition-all duration-300 hover:shadow-md bg-white border-none"
