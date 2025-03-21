@@ -40,7 +40,7 @@ export default function Component() {
 
   return (
     <div
-      className="flex min-h-[50vw] flex-col items-center justify-center py-[5%] px-4 sm:px-6 lg:px-8"
+      className="flex min-h-[50vw] flex-col items-center justify-center py-9 md:py-[5%] px-4 sm:px-6 lg:px-8"
       ref={ref}
       style={{
         transform: isInView ? 'none' : 'translateY(200px)',
@@ -54,7 +54,7 @@ export default function Component() {
         transition={{ duration: 0.8 }}
         className="w-full max-w-7xl mx-auto text-center"
       >
-        <h1 className="text-4xl font-extrabold text-center text-stone-800 mb-[5%] sm:mb-16 lg:mb-20">
+        <h1 className="md:text-4xl text-3xl font-semibold md:font-extrabold text-center text-stone-800 mb-[5%] sm:mb-16 lg:mb-20">
           Why Choose Our Salon?
         </h1>
 
@@ -62,7 +62,7 @@ export default function Component() {
         {error && <p className="text-center text-red-500">{error}</p>}
 
         {!loading && !error && (
-          <div className="grid grid-cols-1 mt-[9%] sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid md:px-0 md:py-0 py-2 px-3 grid-cols-1 mt-[9%] sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
             {features.map((feature: Feature, index: number) => (
               <motion.div
                 key={index}
@@ -79,8 +79,8 @@ export default function Component() {
                     className="object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
-                <h2 className="text-2xl font-semibold text-stone-700 mb-3">{feature.title}</h2>
-                <p className="text-stone-600">{feature.desc}</p>
+                <h2 className="md:text-2xl text-xl font-semibold text-stone-700 mb-3">{feature.title}</h2>
+                <p className="text-stone-600 text-sm">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
