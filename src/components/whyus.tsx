@@ -14,7 +14,7 @@ export default function Component() {
   const isInView = useInView(ref, { once: true })
 
   const [features, setFeatures] = useState<Feature[]>([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
 
   // Fetch features from the API

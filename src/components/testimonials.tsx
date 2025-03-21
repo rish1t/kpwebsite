@@ -15,14 +15,14 @@ interface Testimonial {
 
 export default function ReviewsScroller() {
   const [reviews, setReviews] = useState<Testimonial[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLDivElement>(null);
   const scrollPositionRef = useRef(0);
   const animationRef = useRef<number | null>(null);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
 
   // Fetch Reviews
   useEffect(() => {
