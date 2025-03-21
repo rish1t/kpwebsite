@@ -20,7 +20,7 @@ export default function ReviewsScroller() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await fetch("https://kpcrud-vj8f.vercel.app/api/links6"); // <-- Replace with your actual API endpoint
+        const res = await fetch("https://kpcrud-vj8f.vercel.app/api/links7"); // <-- Replace with your actual API endpoint
         if (!res.ok) throw new Error("Failed to fetch reviews");
 
         const data = await res.json();
@@ -67,13 +67,16 @@ export default function ReviewsScroller() {
   }, [loading, error, reviews.length, isPaused]);
 
   // Duplicate reviews for infinite scroll
-  const displayReviews = [...reviews, ...reviews];
+  // Duplicate more times if there are only a few reviews
+  const duplicateCount = reviews.length < 5 ? 4 : 2;
+  const displayReviews = Array(duplicateCount).fill(reviews).flat();
+
 
   return (
-    <div className="w-full bg-gray-50 py-16 min-h-fit">
-      <h2 className="text-3xl font-medium text-center mb-10 text-gray-800">
-        Customer Testimonials
-      </h2>
+    <div className="w-full py-16 min-h-fit">
+      <h1 className="text-3xl font-bold text-center mb-10 text-gray-800">
+        Student Testimonials
+      </h1>
 
       {loading && <p className="text-center">Loading reviews...</p>}
       {error && <p className="text-center text-red-500">{error}</p>}
@@ -114,11 +117,10 @@ export default function ReviewsScroller() {
                             <Star
                               key={i}
                               size={14}
-                              className={`${
-                                i < review.rating
+                              className={`${i < review.rating
                                   ? "text-gray-800 fill-gray-800"
                                   : "text-gray-300 fill-gray-300"
-                              }`}
+                                }`}
                             />
                           ))}
                         </div>

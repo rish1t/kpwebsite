@@ -28,7 +28,7 @@ const BentoGrid: React.FC = () => {
       <div className="grid grid-cols-6 gap-3 w-full max-w-[90%]">
         {loading ? (
           <p className="text-center text-white col-span-6">Loading images...</p>
-        ) : images.length < 8 ? (
+        ) : images.length < 7 ? (
           <p className="text-center text-white col-span-6">Not enough images.</p>
         ) : (
           <>
@@ -112,7 +112,7 @@ const BentoGrid: React.FC = () => {
             {/* Image 8 */}
             <div className="md:col-span-2 col-span-2 relative overflow-hidden" style={{ paddingTop: "95%" }}>
               <Image
-                src={images[7]}
+                src={images[6]}
                 alt="Image 8"
                 layout="fill"
                 objectFit="cover"

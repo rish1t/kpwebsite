@@ -8,7 +8,7 @@ import PosterGrid from "@/components/posterGrid";
 import Strip from "@/components/horizontal-strip";
 import StudentShowcase from "@/components/sw";
 import Component from "@/components/form";
-import Testimonials from "@/components/testimonials";
+import Acadtestimonials from "@/components/acadtestimonials";
 //import Poster from "@/components/poster";
 
 
@@ -24,7 +24,7 @@ export default function Home() {
       {/* <Poster/> */}
       {/* <Courses /> */}
       <StudentShowcase/>
-      <Testimonials/>
+      <Acadtestimonials/>
     </div>
   );
 }
