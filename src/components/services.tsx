@@ -3,10 +3,16 @@ import Image from "next/image"
 import React, { useEffect, useRef, useState } from "react"
 import { useInView } from "framer-motion"
 
+type Service = {
+  id: string
+  text: string[]
+  imageUrl: string
+}
+
 export const Services = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-  const [services, setServices] = useState<any[]>([])
+  const [services, setServices] = useState<Service[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [currentImageIndices, setCurrentImageIndices] = useState<number[]>([])

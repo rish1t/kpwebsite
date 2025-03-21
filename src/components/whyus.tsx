@@ -3,11 +3,17 @@ import Image from 'next/image'
 import { useRef, useState, useEffect } from 'react'
 import { useInView } from 'framer-motion'
 
+interface Feature {
+  imageUrl: string;
+  title: string;
+  desc: string;
+}
+
 export default function Component() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
-  const [features, setFeatures] = useState([])
+  const [features, setFeatures] = useState<Feature[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 

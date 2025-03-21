@@ -5,8 +5,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import Avatar from "boring-avatars";
 
+interface Testimonial {
+  id: string;
+  username: string;
+  rating: number;
+  time: string;
+  text: string;
+}
+
 export default function ReviewsScroller() {
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState<Testimonial[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
